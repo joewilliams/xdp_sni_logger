@@ -9,8 +9,8 @@ $ go generate && go build && sudo ./xdp_sni_logger lo
 
 If you have a local nginx or similar webserver running you can test with `curl`.
 ```
- $ curl -k --resolve joetest123.com:443:127.0.0.1 https://joetest123.com
- ```
+$ curl -k --resolve joetest123.com:443:127.0.0.1 https://joetest123.com
+```
 
 Important bits of the nginx config:
 ```
