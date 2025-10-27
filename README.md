@@ -1,4 +1,9 @@
 ## XDP SNI Logger
+Look for TLS handshakes and client hello messages, iterate through the TLS extensions looking for and logging the SNI (server name indicator) value.
+
+Caveats: 
+* The SNI needs to be in the first 24 (`TLS_MAX_EXTENSIONS`) extensions.
+* The TLS handshake, client hello and SNI extension need to be in the same XDP buffer.
 
 ### Building and running
 ```
