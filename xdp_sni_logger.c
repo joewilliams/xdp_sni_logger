@@ -23,7 +23,7 @@ char __license[] SEC("license") = "Dual MIT/GPL";
 #define TLS_HANDSHAKE 0x16 // https://www.rfc-editor.org/rfc/rfc5246#appendix-A.1
 #define TLS_CLIENT_HELLO 0x01 // https://www.rfc-editor.org/rfc/rfc8446#section-4.2
 #define SNI_EXTENSION 0 // https://www.rfc-editor.org/rfc/rfc6066#section-1.1
-#define TLS_MAX_EXTENSIONS 24 // make sure we don't loop forever, there are 22 mentioned in the RFC https://www.rfc-editor.org/rfc/rfc8446#section-4.2
+#define TLS_MAX_EXTENSIONS 32 // make sure we don't loop forever, there are 22 mentioned in the RFC https://www.rfc-editor.org/rfc/rfc8446#section-4.2
 #define TLS_MAX_EXTENSION_LEN 1024 // seems to work for SNI at least
 #define DNS_MAX_NAME_LEN 255 // https://www.rfc-editor.org/rfc/rfc1035.html#section-2.3.4
 #define TLS_SESSION_OFFSET 37 // handshake length field (3) + version field (2) + random field (32) = 37
